@@ -13,7 +13,7 @@ const Restaurant_Card=(props)=>{
         locality}
         
     }= props
-    console.log(name)
+
     return(
       <div  >
         

@@ -1,5 +1,7 @@
 import { LOGO_URl } from "./Utilities/contants"
+import { useState } from "react"
 const Header=()=>{
+  const [login, setlogin] = useState('Login')
     return(
       <div className='header'>
         <div className='logo'>
@@ -10,6 +12,8 @@ const Header=()=>{
           <li>About</li>
           <li>Contact us</li>
           <li>Cart</li>
+          
+          <li><button className='loginbutton' onClick={()=>{login==='Login'? setlogin('Logout'):setlogin('Login')}}>{login}</button></li>
         </ul>
   
   
