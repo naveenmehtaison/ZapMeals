@@ -2,23 +2,36 @@ import axios from "axios"
 import Restaurant_Card from "./Restaurant_card"
 import { obj } from "./Utilities/mockdata"
 import { useState,useEffect } from "react"
+import Shimmer from "./Utilities/Shimmer"
 const Body=()=>{
     const [resdata,setresdata]=useState(obj)
+    const [livedata,setlivedata]= useState(obj)
     const [searchvalue, setsearchvalue]= useState('')
-    // async function callback(){
-    //     const response = await axios.get('https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&collection=83667')
-    //     console.log(response.info,'mmmmmmm')
-    //     setresdata(response.info)
+    // async function callback() {
+    //     try {
+    //         const response = await axios.get('https://www.zomato.com/webroutes/getPage?page_url=/ncr')
+    //         const m =  response.data.page_data.sections.SECTION_SEARCH_RESULT
+    //         setresdata(m.slice(1))
+    //     } catch (error) {
+    //         console.error('Error:', error.message); // Log the error message
+    //     }
     // }
+    
     // useEffect(()=>{ callback()},[])
-    // console.log('hoii',resdata)
+    console.log('livedata',livedata)
+    console.log('resdata',resdata)
 
-    return(
+    console.log('hoii',resdata)
+
+    return resdata==null?(
+        <Shimmer/>
+    ):(
         <>
+          {console.log(resdata)}
             <div className="filter">
                 <div>
                     <button onClick={()=>{const filter_data = resdata.filter((ele,item)=>(
-                        ele.info.avgRating>4))
+                        ele.info.rating.rating_text>4))
                         setresdata(filter_data)}}>above 4 Stars</button>
                 </div>
                 <div>
@@ -38,7 +51,7 @@ const Body=()=>{
             </div>
             <div style={{marginLeft:'0px'}} className='res-container'>
                 {resdata.map((restaurant)=>(
-                    <Restaurant_Card key={restaurant.info.id} props = {restaurant.info}/>
+                    <Restaurant_Card key={restaurant.info.resId} props = {restaurant}  />
                 ))}
                 
             </div>

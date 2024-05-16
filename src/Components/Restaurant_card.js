@@ -1,33 +1,35 @@
+import { NavLink } from "react-router-dom"
 import { FOOD_URl } from "./Utilities/contants"
-const Restaurant_Card=(props)=>{
+import { Link } from "react-router-dom"
+import OnlineStatus from "./Utilities/OnlineStatus"
 
-    
-    // console.log('hariaapa', props.info,restaurant_data)
-    const {
-        props:{
-        cloudinaryImageId,
-        name,
-        avgRating,
-        cuisines,
-        costForTwo,
-        locality}
-        
-    }= props
+const Restaurant_Card=(props)=>{
+  console.log(props.props)
+
+
+   
+    console.log('hariaapa', props)
+    const { image, name, rating, cuisine, cft, locality, timing, distance } = props.props.info
+    const add = props.props.order.actionInfo.clickUrl
+    console.log(add)
+    console.log(distance)
+
+
 
     return(
       <div  >
         
           <ul style={{marginLeft:'0px'}} className='res-container'>          
             <div  className='res-card'>
-                <img src={FOOD_URl+ cloudinaryImageId}></img>
-                <h4>{name}</h4>
-                <p>{locality}</p>
-                <p>{costForTwo}</p>
-                <p>{avgRating}Stars</p>
-                <p>deleivery -</p>
+               <img src={image.url}></img>
+                <Link to ={`/resmenu/${add}`}><h4>{name}</h4></Link>
+                <p>{locality.name}</p>  
+                 <p>{cft.text}</p>  
+                <p>{rating.rating_text}Stars</p> 
+                <p>{distance}</p>  
             </div>
   
-        </ul>
+          </ul>
       </div>
     )
 }

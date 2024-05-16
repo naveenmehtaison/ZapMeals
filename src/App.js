@@ -6,7 +6,7 @@ import Restaurant_Card from './Components/Restaurant_card';
 //cart element
 //Footer
 //*
-//
+import { Outlet } from 'react-router-dom';
 import Body from './Components/Body';
 import { obj } from './Components/Utilities/mockdata';
 
@@ -14,9 +14,7 @@ function App() {
   return (
     <div>
       <Header/>
-
-
-        <Body  />
+      <Outlet/>
 
 
     </div>
