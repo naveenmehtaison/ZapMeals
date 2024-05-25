@@ -6353,7 +6353,7 @@ export const obj =  [
                   "clickActionDeeplink": ""
               },
               "distance": "854 m",
-              "isPromoted": false,
+              "isPromoted": true,
               "promotedText": "",
               "trackingData": [
                   {
