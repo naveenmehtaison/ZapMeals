@@ -1,5 +1,5 @@
 export const LOGO_URl = 'https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All'
-
+export const No_Image = 'https://png.pngtree.com/png-vector/20221125/ourmid/pngtree-no-image-available-icon-flatvector-illustration-pic-design-profile-vector-png-image_40966566.jpg'
 export const FOOD_URl = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/'
 export const Api_url1 =  'https://www.zomato.com/webroutes/getPage?page_url=' 
 export const Api_url2 =  '&location=&isMobile=0'

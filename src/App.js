@@ -6,17 +6,25 @@ import { Outlet } from 'react-router-dom';
 import Body from './Components/Body';
 import { obj } from './Components/Utilities/mockdata';
 import StoreContext from './Components/Store/StoreContext';
-
+import HeroBanner from './Components/HeroBanner';
+import { Provider } from 'react-redux';
+import Store from './Components/Utilities/ReduxStore';
+import { ToastContainer, toast } from 'react-toastify';
 function App() {
   return (
     <div>
+{/* 
+    <Provider value={Store}> */}
+      <StoreContext>
+      
+        <Header/>
 
-    
-    <StoreContext>
-    
-      <Header/>
-      <Outlet/>
-    </StoreContext> 
+        {/* <ToastContainer/> */}
+        <Outlet/>
+        
+      </StoreContext> 
+
+    {/* </Provider> */}
 
 
 

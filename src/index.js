@@ -10,14 +10,19 @@ import Contact from './Components/Pages/Contact';
 import RestaurantMenu from './Components/RestaurantMenu';
 import { lazy } from 'react';
 import { Suspense } from 'react';
+import { Provider } from 'react-redux';
+import Store from './Components/Utilities/ReduxStore';
 import Shimmer from './Components/Utilities/Shimmer';
-// import Grocery from './Components/Grocery';
+import Login from './Components/Login';
 const Grocery = lazy(()=>import('./Components/Grocery'))
 const routelayout = createBrowserRouter([
     {
         path:'/',
         element:<App/>,
         children:[
+            {
+                path:'/login',element:<Login/>
+            },
             {
                 path:'/',element:<Body/>
             },
@@ -48,4 +53,6 @@ const routelayout = createBrowserRouter([
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<RouterProvider router={routelayout} />,);
+root.render(
+<Provider store={Store}><RouterProvider router={routelayout} /></Provider>);
+

@@ -11,7 +11,7 @@ const useMenu=(path)=>{
         try{
         const res = await axios.get( Api_url1+path+Api_url2)
         const menuList = res?.data|| [];
-        console.log(res.data)
+
         setdata(menuList);      
         }
         catch(err){
@@ -20,7 +20,7 @@ const useMenu=(path)=>{
         }
 
     }
-    console.log()
+
     return data
 }
 export default useMenu
