@@ -4,8 +4,10 @@ import { setcart,delfromcart, login } from '../Utilities/createslice'
 import { decfromcart,incfromcart } from '../Utilities/createslice'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 function Cart() {
     // const [totalamount,settotalamount]= useState(0)
+    const navigate = useNavigate()
     const Login = useSelector(state=>state.cart.login)
 
     const Dispatch = useDispatch()
@@ -74,7 +76,7 @@ function Cart() {
             </div>
           </>}
           {!Login && 
-            <div className=' p-4 bg-black m-6 rounded-md'>
+            <div onClick={()=>{navigate('/login')}} className=' p-4 bg-black m-6 rounded-md'>
               <h1 className='text-green-600 ml-7'>LOG IN TO PLACE ORDER</h1>
             
             </div>

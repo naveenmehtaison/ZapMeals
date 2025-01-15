@@ -16,7 +16,6 @@ const Body=()=>{
 
     const [resdata,setresdata] = useState(newdata)
     useEffect(()=>{
-        console.log('datashould be changes', newdata)
         setresdata(Array.isArray(newdata)?newdata:[])
 
 
@@ -61,7 +60,7 @@ const Body=()=>{
                 </div>
 
             </div> */}
-            <div  className="flex flex-wrap ml-6 gap-[2.3rem]   p-10 ">
+            <div  className="flex flex-wrap  gap-12 justify-center">
                 {resdata.map((restaurant)=>(
                     <>
                         {restaurant.isPromoted?(

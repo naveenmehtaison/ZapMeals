@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import {  createUserWithEmailAndPassword } from "firebase/auth"
 import {  signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from 'react-toastify'
-import { auth } from '../Firebase'
+import auth from './Firebase'
 import { getAuth } from 'firebase/auth'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';

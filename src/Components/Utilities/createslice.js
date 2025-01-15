@@ -74,12 +74,10 @@ export const SearchBarProducts = createSlice({
 
         },
         filterdata(state,action){
-            console.log('insinde fuilere data', action.payload, [...state.products])
             const newdata = obj.filter((ele, item) => {
                 return ele.info.name.toLowerCase().includes(action.payload.toLowerCase());
             });
             
-            console.log(action.payload, newdata)
             state.products = newdata
             if(action.payload.length===0){
                 state.products = obj

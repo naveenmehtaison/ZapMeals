@@ -9,7 +9,7 @@ import StoreContext from './Components/Store/StoreContext';
 import HeroBanner from './Components/HeroBanner';
 import { Provider } from 'react-redux';
 import Store from './Components/Utilities/ReduxStore';
-import { ToastContainer, toast } from 'react-toastify';
+
 function App() {
   return (
     <div>
@@ -19,10 +19,11 @@ function App() {
       
         <Header/>
 
-        {/* <ToastContainer/> */}
+
         <Outlet/>
         
       </StoreContext> 
+
 
     {/* </Provider> */}
 
