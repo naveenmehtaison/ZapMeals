@@ -1,11 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import { useRef } from 'react'
-import {  createUserWithEmailAndPassword } from "firebase/auth"
-import {  signInWithEmailAndPassword } from "firebase/auth";
+import {  createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { toast } from 'react-toastify'
-import auth from './Firebase'
-import { getAuth } from 'firebase/auth'
+import { auth } from './../firebase';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { loginfunc } from './Utilities/createslice';
