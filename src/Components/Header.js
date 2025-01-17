@@ -34,7 +34,6 @@ const Header=()=>{
   const [hamburgerclass, sethamburgerclass] = useState('hidden')
   const hamburgerFunc=()=>{
     setshowNavlink(!showNavlink)
-    '' // When the menu is shown
     sethamburgerclass( showNavlink? 'flex flex-col bg-slate-100 gap-3 h-48 p-4 rounded-lg absolute right-4 top-24  ' : 'hidden')
 
   }
@@ -55,7 +54,7 @@ const Header=()=>{
     
             <ul className={`${hamburgerclass} z-20  sm:flex gap-6 `} >
                
-            {/* <SearchBar/> */}
+
 
   
               <li><Link to='/'><AiOutlineHome></AiOutlineHome></Link></li>
