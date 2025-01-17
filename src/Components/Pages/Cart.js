@@ -28,7 +28,7 @@ function Cart() {
     }
 
   return (
-    <div className='bg-gray-200  rounded-md mt-2 w-[340px] h-full overflow-y-auto absolute z-10  right-0' >
+    <div className='bg-gray-200  rounded-md mt-2 w-[340px] h-full overflow-y-auto absolute z-30  right-0' >
         <div className='flex p-3 justify-between w-full bg-white'>
             <h1 className='font-extrabold' >My Cart</h1>
             <button onClick={()=>Dispatch(setcart())}> X</button>   

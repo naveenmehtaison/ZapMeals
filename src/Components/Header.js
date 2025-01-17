@@ -53,7 +53,7 @@ const Header=()=>{
             <RxHamburgerMenu onClick={()=>{hamburgerFunc()}} className="sm:hidden " />
 
     
-            <ul className={`${hamburgerclass} z-50  sm:flex gap-6 `} >
+            <ul className={`${hamburgerclass} z-20  sm:flex gap-6 `} >
                
             {/* <SearchBar/> */}
 
