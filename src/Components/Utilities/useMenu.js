@@ -2,6 +2,7 @@ import { useEffect,useState } from "react";
 import axios from "axios";
 import { Api_url1 } from "./contants";
 import { Api_url2 } from "./contants";
+import { toast } from "react-toastify";
 const useMenu=(path)=>{
     const [data,setdata]= useState(null)
     useEffect(()=>{
@@ -15,7 +16,7 @@ const useMenu=(path)=>{
         setdata(menuList);      
         }
         catch(err){
-            alert(err)
+            toast.error(err)
 
         }
 

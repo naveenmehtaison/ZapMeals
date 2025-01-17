@@ -11,9 +11,10 @@ import RestaurantMenu from './Components/RestaurantMenu';
 import { lazy } from 'react';
 import { Suspense } from 'react';
 import { Provider } from 'react-redux';
-import Store from './Components/Utilities/ReduxStore';
+import Store from './Redux/ReduxStore';
 import Shimmer from './Components/Utilities/Shimmer';
 import Login from './Components/Login';
+import { ToastContainer, toast } from 'react-toastify';
 const Grocery = lazy(()=>import('./Components/Grocery'))
 const routelayout = createBrowserRouter([
     {
@@ -36,9 +37,6 @@ const routelayout = createBrowserRouter([
                 path:'/home',element:<Body/>
             },
             {
-                path:'/home',element:<Body/>
-            },
-            {
                 path:'/resmenu/*',
                 element:<RestaurantMenu/>
             },
@@ -54,5 +52,7 @@ const routelayout = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<Provider store={Store}><RouterProvider router={routelayout} /></Provider>);
+<Provider store={Store}><RouterProvider router={routelayout} />
+<ToastContainer/>
+</Provider>);
 

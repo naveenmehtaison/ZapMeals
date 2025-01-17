@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 import { auth } from './../firebase';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { loginfunc } from './Utilities/createslice';
+import { loginfunc } from '../Redux/createslice';
 const Login = () => {
   const navigate = useNavigate()
   const Dispatch = useDispatch()
@@ -47,8 +47,6 @@ signInWithEmailAndPassword(auth, nameRef.current.value, passwordRef.current.valu
     navigate('/')
     Dispatch(loginfunc())
     
-    alert('signed in ')
-    alert('logged in suceesfully')
     // ...
   })
   .catch((error) => {

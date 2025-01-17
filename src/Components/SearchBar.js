@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { filterdata } from './Utilities/createslice'
+import { filterdata } from '../Redux/createslice'
 // import {fasearch}
 const SearchBar = () => {
   const dispatch = useDispatch()

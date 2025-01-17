@@ -1,10 +1,13 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { setcart,delfromcart, login } from '../Utilities/createslice'
-import { decfromcart,incfromcart } from '../Utilities/createslice'
+import { setcart,delfromcart, login } from '../../Redux/createslice'
+import { decfromcart,incfromcart } from '../../Redux/createslice'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { FaShippingFast } from 'react-icons/fa'
+import { RiBillLine } from "react-icons/ri";
+
 function Cart() {
     // const [totalamount,settotalamount]= useState(0)
     const navigate = useNavigate()
@@ -25,18 +28,19 @@ function Cart() {
     }
 
   return (
-    <div className='bg-gray-200  mt-2 w-[340px] h-full overflow-y-auto absolute z-10  right-0' >
+    <div className='bg-gray-200  rounded-md mt-2 w-[340px] h-full overflow-y-auto absolute z-10  right-0' >
         <div className='flex p-3 justify-between w-full bg-white'>
-            <h1 >My Cart</h1>
+            <h1 className='font-extrabold' >My Cart</h1>
             <button onClick={()=>Dispatch(setcart())}> X</button>   
         </div>
 
         
           {Cartitem.length==0?
               <div className='bg-white w-full h-0'>
-              <h1>Empty Cart</h1>
+              <h1 className='font-bold'>Empty Cart</h1>
               </div>:
           <>
+          <div className='bg-white shadow-xl m-4 rounded-md'>
             {Cartitem.map((ele,item)=>(
                 // { const price = totalamount + ele.item.default_price
                 //   settotalamount(price)}
@@ -55,24 +59,30 @@ function Cart() {
                 </div>
               )
             ))}
-            <div className='m-4 p-2 justify-around shadow-2xl w-auto h-auto border-spacing-24 border-black'>
+            </div>
+            <div className='m-4 p-2 justify-around shadow-2xl rounded-md w-auto h-auto border-spacing-24 border-black bg-white'>
               
-              <h2 className='mb-4 text-center' >Bill details</h2>
+              <h2 className=' text-center font-bold'> Bill details</h2>
               <hr className='bg-black'></hr>
-              <div className='flex justify-between'>
-                <p>Total amount </p>
+              <div className='flex justify-between items-center'>
+                <p className='flex items-center gap-2'><RiBillLine/> Items Total </p>
                 <p>: {Totalamount}</p>
               </div>
-              <div className='flex justify-between'>
-                <p>Deleivery charges </p>
+              <div className='flex justify-between items-center'>
+                <p className='flex items-center gap-2' > <FaShippingFast/>  Deleivery charges </p>
                 <p>:50</p>
               </div>
               <div className='flex justify-between'>
-                <p>Totalamount</p>
+                <p>Grand Total</p>
                 <p>:{Totalamount+50}</p>
               </div>
 
               
+            </div>
+            <div className='bg-white shadow-xl m-4 rounded-md p-2'>
+              <h2 className=' font-bold text-center'> Cancellation Policy</h2>
+              <p className='font-thin' >Orders cannot be cancelled once packed for delivery. In case of unexpected delays, a refund will be provided, if applicable.</p>
+
             </div>
           </>}
           {!Login && 

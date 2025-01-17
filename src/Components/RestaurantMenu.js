@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useParams } from "react-router-dom"
 import Shimmer from "./Utilities/Shimmer"
 import useMenu from "./Utilities/useMenu"
-import ShowingCategories from "./Utilities/ShowingCategories"
+import ShowingCategories from "./ShowingCategories"
 import { toast } from "react-toastify"
 
 const RestaurantMenu=()=>{

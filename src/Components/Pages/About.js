@@ -1,36 +1,45 @@
-const  About=()=>{
-    return(
-        <div>
-<section className="bg-blueGray-200 -mt-24">
-  <div className="container mx-auto px-4">
-    <div className="flex flex-wrap">
-      <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-      </div>
-    </div>
-    <div className="flex flex-wrap items-center mt-16">
-      <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-        <h3 className="text-3xl mb-2 font-semibold leading-normal">Working with us is a pleasure</h3>
-        <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">Get THhe best optimised developed website with responsive user interference at minimal cost</p>
-        <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600"></p>
-        <a href="#" className="font-bold text-blueGray-700 mt-8">Contact naveenmehta099@gmail.com</a>
-      </div>
 
-    </div>
-  </div>
-  <footer className="relative pt-8 pb-6 mt-8">
-    <div className="container mx-auto px-4">
-      <div className="flex flex-wrap items-center md:justify-between justify-center">
-        <div className="w-full md:w-6/12 px-4 mx-auto text-center">
-          <div className="text-sm text-blueGray-500 font-semibold py-1">
-            Made with <a href="(link unavailable)" className="text-blueGray-500 hover:text-gray-800" target="_blank">React JS</a> by <a href="(link unavailable)" className="text-blueGray-500 hover:text-blueGray-800" target="_blank">Naveen Singh Mehta</a>.
-          </div>
+import React from "react";
+import naveen from '../../Assests/PicsArt_01-04-10.56.36.jpg'
+
+const About = () => {
+  return (
+    <div className="bg-gray-100 min-h-screen flex items-center justify-center px-6">
+      <div className="bg-white shadow-lg rounded-lg max-w-3xl p-6 text-center">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">About Naveen Singh Mehta</h1>
+        <p className="text-lg text-gray-600 mb-6">
+          Hi, I'm Naveen Singh Mehta, a passionate React Developer with a knack for building user-friendly, responsive, and dynamic web applications. I love creating solutions that make a difference!
+        </p>
+        <div className="flex flex-col items-center">
+          <img
+            src={naveen}
+            alt="Naveen Singh Mehta"
+            className="rounded-full w-32 h-32 mb-4"
+          />
+          <h2 className="text-xl font-semibold text-gray-800">React Developer</h2>
+          <p className="text-gray-600 mt-2">
+            With a strong foundation in JavaScript, React, and front-end technologies, I specialize in crafting scalable and efficient applications. My goal is to keep learning, growing, and delivering impactful solutions.
+          </p>
+        </div>
+        <div className="mt-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">Skills</h3>
+          <p className="text-gray-600">
+            React.js, JavaScript, Redux, Tailwind CSS, Firebase, SCSS, Responsive Design
+          </p>
+        </div>
+        <div className="mt-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">Contact</h3>
+          <p className="text-gray-600">Feel free to reach out to me for collaboration or projects!</p>
+          <a
+            href="mailto:naveen@example.com"
+            className="text-blue-500 font-medium hover:underline mt-2 block"
+          >
+            naveenmehta099@gmail.com
+          </a>
         </div>
       </div>
     </div>
-  </footer>
-</section>
+  );
+};
 
-        </div>
-    )
-}
-export default About
+export default About;

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { obj } from "./mockdata"
+import { obj } from "../Components/Utilities/mockdata"
 const initialstate = {login:false,token:'',cart:[],showcart:false, totalprice:0, products:obj}
 const createslice = createSlice({
     name:'cart',

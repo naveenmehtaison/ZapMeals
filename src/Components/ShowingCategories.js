@@ -1,24 +1,19 @@
 import { useDispatch, useSelector } from "react-redux"
-import Store from "./ReduxStore"
-import { addtocart } from "./createslice"
-import { No_Image } from "./contants"
+import Store from "../Redux/ReduxStore"
+import { addtocart } from "../Redux/createslice"
+import { No_Image } from "./Utilities/contants"
+import { toast } from "react-toastify"
 
 const ShowingCategories=(props)=>{
+    const Islogin = useSelector((state)=>state.cart.login)
     const Dispatch = useDispatch()
     const Carthandler=(ele)=>{
-        // toast('🦄 Wow so easy!', {
-        //     position: "top-right",
-        //     autoClose: 5000,
-        //     hideProgressBar: false,
-        //     closeOnClick: false,
-        //     pauseOnHover: true,
-        //     draggable: true,
-        //     progress: undefined,
-        //     theme: "light",
-
-        //     });
-
+        if(!Islogin){
+            toast.error('Please login to add items to cart')
+            return
+        }
         Dispatch(addtocart(ele))
+        toast.success('Added to cart')
     }
     if(props.props===''){
         return
