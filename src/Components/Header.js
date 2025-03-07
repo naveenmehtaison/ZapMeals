@@ -69,7 +69,26 @@ const Header=()=>{
               
               </li>
               
-              <li onClick={()=>{loginstate? (Dispatch(logoutfunc())):null}}><Link to='/login'>{loginstate?<AiOutlineLogout></AiOutlineLogout>:<AiOutlineLogin></AiOutlineLogin>}</Link> </li>
+              <li
+  onClick={() => {
+    if (loginstate) {
+      Dispatch(logoutfunc());
+    }
+  }}
+>
+  {loginstate ? (
+    <span className="flex items-center cursor-pointer">
+      <AiOutlineLogout className="mr-1" />
+      Logout
+    </span>
+  ) : (
+    <Link to="/login" className="flex items-center">
+      <AiOutlineLogin className="mr-1" />
+      Login
+    </Link>
+  )}
+</li>
+
               </ul>
 
 
