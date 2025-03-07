@@ -12,6 +12,7 @@ import SearchBar from "./SearchBar"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { AiOutlineHome, AiOutlineInfoCircle, AiOutlineShoppingCart, AiOutlineLogin , AiOutlineLogout} from 'react-icons/ai'
 import useComponentVisible from "../hooks/useComponentVisible"
+import headerImage from '../../src/Assests/image.png'
 const Header=()=>{
   const { ref, isComponentVisible } = useComponentVisible(true);
   console.log(isComponentVisible)
@@ -45,7 +46,7 @@ const Header=()=>{
       
       <div className=' h-30 px-8 border-solid bg-gradient-to-r from-slate-900 via-slate-400 to-slate-400  rounded text-2xl'>
         <div className='flex space justify-between items-center'>
-          <img className='size-28 rounded-full m-4 ' src={'https://plus.unsplash.com/premium_photo-1675344317761-3ace7cf2362a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGxvZ298ZW58MHx8MHx8fDA%3D'}></img>
+          <img className='size-28 rounded-full m-4 ' src={headerImage}></img>
           
             {/* <SearchBar/> */}
             
