@@ -1,5 +1,5 @@
 import React from 'react'
-import { Fragment } from 'react'
+
 import heroimg from "../Assests/flat-lay-table-full-delicious-food-composition.png"
 
 const HeroBanner = () => {

@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.2900036e.css",
-    "main.js": "/static/js/main.3eb9fabf.js",
+    "main.css": "/static/css/main.0e0e92f5.css",
+    "main.js": "/static/js/main.b941325d.js",
     "static/js/30.3fc195be.chunk.js": "/static/js/30.3fc195be.chunk.js",
+    "static/media/flat-lay-table-full-delicious-food-composition.png": "/static/media/flat-lay-table-full-delicious-food-composition.ada4b074129521251e3c.png",
+    "static/media/PicsArt_01-04-10.56.36.jpg": "/static/media/PicsArt_01-04-10.56.36.bab67934d2ffab74c38c.jpg",
+    "static/media/image.png": "/static/media/image.c52467436b8f0e268e3f.png",
     "index.html": "/index.html",
-    "main.2900036e.css.map": "/static/css/main.2900036e.css.map",
-    "main.3eb9fabf.js.map": "/static/js/main.3eb9fabf.js.map",
+    "main.0e0e92f5.css.map": "/static/css/main.0e0e92f5.css.map",
+    "main.b941325d.js.map": "/static/js/main.b941325d.js.map",
     "30.3fc195be.chunk.js.map": "/static/js/30.3fc195be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2900036e.css",
-    "static/js/main.3eb9fabf.js"
+    "static/css/main.0e0e92f5.css",
+    "static/js/main.b941325d.js"
   ]
 }

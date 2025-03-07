@@ -1,7 +1,5 @@
 import React from 'react'
 import { TiSocialInstagram } from "react-icons/ti";
-import { TiSocialFacebook } from 'react-icons/ti';
-import { TiSocialLinkedin } from 'react-icons/ti';
 import { TiPhone } from 'react-icons/ti';
 import { MdMailOutline } from "react-icons/md";
 const Footer = () => {

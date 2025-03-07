@@ -1,6 +1,6 @@
-import { LOGO_URl } from "./Utilities/contants"
+
 import { useState } from "react"
-import { NavLink,Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import OnlineStatus from "./Utilities/OnlineStatus"
 import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux"
@@ -8,21 +8,16 @@ import { logoutfunc, setcart } from "../Redux/createslice"
 import Cart from "./Pages/Cart"
 import { Fragment } from "react"
 import { useNavigate } from "react-router-dom"
-import SearchBar from "./SearchBar"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { AiOutlineHome, AiOutlineInfoCircle, AiOutlineShoppingCart, AiOutlineLogin , AiOutlineLogout} from 'react-icons/ai'
 import useComponentVisible from "../hooks/useComponentVisible"
 import headerImage from '../../src/Assests/image.png'
 const Header=()=>{
-  const { ref, isComponentVisible } = useComponentVisible(true);
-  console.log(isComponentVisible)
-  const navigate = useNavigate()
   const loginstate = useSelector((state)=>state.cart.login)
   const iscart = useSelector((state)=>state.cart.showcart)
   const cartlen = useSelector((state)=>state.cart.cart.length)
 
   const Dispatch  = useDispatch()
-  const on = OnlineStatus()
   const showcartfunc=()=>{
     Dispatch(setcart())
   
@@ -30,7 +25,7 @@ const Header=()=>{
   }
 
 
-  const [login, setlogin] = useState('Login')
+
   const [showNavlink, setshowNavlink] = useState(false)
   const [hamburgerclass, sethamburgerclass] = useState('hidden')
   const hamburgerFunc=()=>{
