@@ -1,6 +1,5 @@
 import Restaurant_Card, { Restaurant_Card_special } from "./Restaurant_card";
-import { obj } from "./Utilities/mockdata";
-import { useState, useEffect } from "react";
+import { useMemo } from "react";
 import Shimmer from "./Utilities/Shimmer";
 import { useSelector } from "react-redux";
 import HeroBanner from "./HeroBanner";
