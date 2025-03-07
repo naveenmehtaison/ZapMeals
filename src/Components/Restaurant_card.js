@@ -1,17 +1,12 @@
-import { NavLink } from "react-router-dom";
-import { FOOD_URl } from "./Utilities/contants";
 import { Link } from "react-router-dom";
-import OnlineStatus from "./Utilities/OnlineStatus";
-
 const Restaurant_Card = (props) => {
-  const { image, name, rating, cuisine, cft, locality, timing, distance } =
-    props.props.info;
+  const { image, name, rating, cft, locality, distance } = props.props.info;
   const add = props.props.order.actionInfo.clickUrl;
   return (
     <div className="  h-72 w-60 hover:bg-slate-400 hover:scale-95  size-96 hover:shadow-[10px_10px_30px]">
       <ul>
         <div>
-          <img className="h-48 w-60" src={image.url}></img>
+          <img alt="restaurantcard" className="h-48 w-60" src={image.url}></img>
           <Link to={`/resmenu/${add}`}>
             <b className="text-blue-800">{name}</b>
           </Link>

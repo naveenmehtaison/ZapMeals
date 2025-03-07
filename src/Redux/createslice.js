@@ -16,7 +16,7 @@ const createslice = createSlice({
             state.login=false
         },
         addtocart(state,action){
-            const cehck = state.cart.find((ele)=>ele.item.id ==action.payload.item.id)
+            const cehck = state.cart.find((ele)=>ele.item.id ===action.payload.item.id)
             const filterarray = state.cart.filter((ele)=>ele.item.id!==action.payload.item.id)
             if(cehck){
 
@@ -46,7 +46,7 @@ const createslice = createSlice({
         decfromcart(state,action){
             const j = {...action.payload}
             j.quantity--
-            const cehck = state.cart.find((ele)=>ele.item.id ==action.payload.item.id)
+            const cehck = state.cart.find((ele)=>ele.item.id ===action.payload.item.id)
             const filterarray = state.cart.filter((ele)=>ele.item.id!==action.payload.item.id)
             if(j.quantity===0){
                 state.cart=[...filterarray]
@@ -59,7 +59,7 @@ const createslice = createSlice({
         incfromcart(state,action){
             const j = {...action.payload}
             j.quantity++
-            const cehck = state.cart.find((ele)=>ele.item.id ==action.payload.item.id)
+            const cehck = state.cart.find((ele)=>ele.item.id ===action.payload.item.id)
             const filterarray = state.cart.filter((ele)=>ele.item.id!==action.payload.item.id)
             state.cart=[...filterarray,j] 
         }

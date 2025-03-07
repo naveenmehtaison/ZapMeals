@@ -10,7 +10,7 @@ const HeroBanner = () => {
         <h6 className='mt-2 text-white sm:text-slate-500 text-center my-2 sm:text-left'>Your Favourite Food Just A Click Away</h6>
         <button className='text-white bg-slate-700 p-2 w-32 mt-2 rounded-lg mx-[30%] sm:mx-0  '>Order Now</button>
         </div>
-        <img className='absolute z-10   size-96 my-2 w-[34rem] sm:[30rem] md:w-[40rem]  lg:w-[48rem]  sm:m-0 sm:right-[0.8rem]' src={heroimg} />
+        <img alt='herobanner' className='absolute z-10   size-96 my-2 w-[34rem] sm:[30rem] md:w-[40rem]  lg:w-[48rem]  sm:m-0 sm:right-[0.8rem]' src={heroimg} />
 
         
 

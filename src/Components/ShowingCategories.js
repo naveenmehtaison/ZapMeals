@@ -35,6 +35,7 @@ const ShowingCategories = (props) => {
                   >
                     <div className="relative">
                       <img
+                      alt="item_image"
                         onClick={() => Carthandler(ele)}
                         className="h-[150px] w-[250px] rounded-xl cursor-pointer "
                         src={ele.item.item_image_url || No_Image}

@@ -34,7 +34,7 @@ function Cart() {
         <button onClick={() => Dispatch(setcart())}> X</button>
       </div>
 
-      {Cartitem.length == 0 ? (
+      {Cartitem.length === 0 ? (
         <div className="bg-white w-full h-0">
           <h1 className="font-bold">Empty Cart</h1>
         </div>
@@ -48,6 +48,7 @@ function Cart() {
               <div className="flex  justify-between m-2 p-2" key={ele.item.id}>
                 <img
                   className="size-20 p-2"
+                  alt="item_image"
                   src={ele.item.item_image_url}
                 ></img>
                 <p className="w-30 overflow-hidden text-wrap text-ellipsis">

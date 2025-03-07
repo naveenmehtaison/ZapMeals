@@ -5,18 +5,21 @@ import Shimmer from "./Utilities/Shimmer";
 import { useSelector } from "react-redux";
 import HeroBanner from "./HeroBanner";
 const Body = () => {
-  const newdata = useSelector((state) => state.searchbar.products) || [];
+    const newdata = useSelector((state) => state.searchbar.products) || [];
 
-  const [resdata, setresdata] = useState(newdata);
-  useEffect(() => {
-    setresdata(Array.isArray(newdata) ? newdata : []);
-  }, [newdata]);
+const resdata = useMemo(() => (Array.isArray(newdata) ? newdata : []), [newdata]);
 
-  const {} = obj;
+//   const newdata = useSelector((state) => state.searchbar.products) || [];
+
+//   const [resdata, setresdata] = useState(newdata);
+//   useEffect(() => {
+//     setresdata(Array.isArray(newdata) ? newdata : []);
+//   }, [newdata]);
+
 
   const Promoted_card = Restaurant_Card_special(Restaurant_Card);
 
-  return resdata == null ? (
+  return resdata === null ? (
     <Shimmer />
   ) : (
     <>
