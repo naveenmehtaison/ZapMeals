@@ -9,7 +9,15 @@ const SearchBar = () => {
 
   const resdata = useSelector((state) => state.cart.products);
   useEffect(() => {
-    dispatch(filterdata(searchvalue));
+    
+    const handler = setTimeout(() => {
+      dispatch(filterdata(searchvalue));
+    }, 1000);
+  
+    // Cleanup function: purana timeout hatao
+    return () => {
+      clearTimeout(handler);
+    };
   }, [searchvalue]);
 
   return (
